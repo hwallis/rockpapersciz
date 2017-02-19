@@ -18,7 +18,7 @@ function compPick() {
       }
       else {
           compPlay = "scissors";
-    }
+    } 
 }
 
 //Functions for updating the Scores
