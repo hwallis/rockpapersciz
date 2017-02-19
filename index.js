@@ -19,14 +19,15 @@ function compPick() {
     }
 }
 
+//Functions for updating the Scores
 function compWin() {
     compScore = ++compScore;
 }
-
 function myWin() {
     myScore = ++myScore;
 }
 
+//Function calls compPick() to decide winner, alerts results and runs compWin() or myWin() to update score.
 
 function myPick(user) {
     compPick();
