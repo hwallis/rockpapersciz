@@ -1,13 +1,13 @@
 var computer;
 var user;
 var compPlay;
-var myScore;
-var compScore;
+var myScore = $('#myScore').val();
+var compScore = $('#compScore').val();
 
 
 //Function to Generate Computer's Choice
 function compPick() {
-    computer = Math.round((Math.random()*9)+3);
+    computer = Math.round((Math.random()*3)+1);
       if (computer == 1) {
           compPlay = "rock";
       }
@@ -19,10 +19,17 @@ function compPick() {
     }
 }
 
-function myPick() {
+function compWin() {
+    compScore = ++compScore;
+}
+
+function myWin() {
+    myScore = ++myScore;
+}
+
+
+function myPick(user) {
     compPick();
-    user = $('img').attr('id');
-    console.log(user);
   switch(user) {
       case "rock" :
         if (compPlay === "rock") {
@@ -31,15 +38,18 @@ function myPick() {
         }
         if (compPlay === "paper") {
           alert("Computer picked paper. Paper covers rock. Computer wins!");
+          compWin();
           break;
         }
         if (compPlay === "scissors") {
           alert("Computer picked scissors. Rock beats scissors. You win!");
+          myWin();
           break;
         }
       case "paper" :
         if (compPlay === "rock") {
           alert("Computer chose rock. Paper covers rock. You win!");
+          myWin();
           break;
           }
         else if (compPlay === "paper") {
@@ -47,16 +57,19 @@ function myPick() {
           break;
           }
         else if (compPlay === "scissors") {
-          alert("Computer chose scissors. Scissors cut papaer. Computer wins!");
+          alert("Computer chose scissors. Scissors cut paper. Computer wins!");
+          compWin();
           break;
           }
       case "scissors" :
         if (compPlay === "rock") {
           alert("Computer chose rock. Rock beats scissors. Computer wins!");
+          compWin();
           break;
           }
         else if (compPlay === "paper") {
           alert("Computer chose paper. Scissors cut paper. You win!");
+          myWin();
           break;
           }
         else if (compPlay === "scissors") {

@@ -8,21 +8,26 @@
   </head>
   <body>
     <h1 id="h11">Pick Rock, Paper, or Scissors!</h1>
-      <div id="choices" class="container">
+      <div class="container">
         <div class="row">
-                <img src="assets/rock.png" class="col s4" id="rock" onclick="myPick()"/>
-                <img src="assets/paper.png" class="col s4" id="paper" onclick="myPick()"/>
-                <img src="assets/scissors.png" class="col s4" id="scissors" onclick="myPick()"/>
+            <!--CHOICES-->
+                <img src="assets/rock.png" class="col s4" id="rock" onclick="myPick('rock')"/>
+                <img src="assets/paper.png" class="col s4" id="paper" onclick="myPick('paper')"/>
+                <img src="assets/scissors.png" class="col s4" id="scissors" onclick="myPick('scissors')"/>
         </div>
+      </div>
+    <div class="container">
+            <!--SCORES............-->
+        <h3 class="blue-text text-darken-2" class="col s4">My Score</h3>
+ 
+        <p id="myScore">0</p>
+        <hr width=100% height=10px color="blue">
+        <h3 class="blue-text" class="col s4">Computer's Score</h3>
+    <form>
+        <input type="text-box" id="compScore">
+    </form>
     </div>
-    <script>console.log(myPick());</script>
-        <div class="container">
-                <h3 class="blue-text text-darken-2" class="col s4">My Score</h3>
-                <form input="text" id="myScore" >0</form>
-                <hr width=100% height=10px color="blue">
-                <h3 class="blue-text" class="col s4">Computer's Score</h3>
-                <form input="text" id="compScore" >0</form>
-        </div>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="index.js"></script>
  </body>
