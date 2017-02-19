@@ -1,10 +1,10 @@
 var computer;
 var user;
 var compPlay;
-var scoreMe;
-var scoreComp;
-$("#myScore").replaceWith(scoreMe);
-$("#compScore").replaceWith(scoreComp);
+var scoreMe=0;
+var scoreComp=0;
+$('.myScore').html=(scoreMe);
+$('.compScore').html=(scoreComp);
 
 
 //Function to Generate Computer's Choice
