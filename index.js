@@ -1,8 +1,10 @@
 var computer;
 var user;
 var compPlay;
-var myScore = $('#myScore').val();
-var compScore = $('#compScore').val();
+var scoreMe;
+var scoreComp;
+$("#myScore").replaceWith(scoreMe);
+$("#compScore").replaceWith(scoreComp);
 
 
 //Function to Generate Computer's Choice
@@ -21,10 +23,10 @@ function compPick() {
 
 //Functions for updating the Scores
 function compWin() {
-    compScore = ++compScore;
+    scoreComp = ++scoreComp;
 }
 function myWin() {
-    myScore = ++myScore;
+    scoreMe = ++scoreMe;
 }
 
 //Function calls compPick() to decide winner, alerts results and runs compWin() or myWin() to update score.
