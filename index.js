@@ -3,8 +3,7 @@ var user;
 var compPlay;
 var scoreMe=0;
 var scoreComp=0;
-$('.myScore').html=(scoreMe);
-$('.compScore').html=(scoreComp);
+
 
 
 //Function to Generate Computer's Choice
@@ -23,10 +22,12 @@ function compPick() {
 
 //Functions for updating the Scores
 function compWin() {
-    scoreComp = ++scoreComp;
+    ++scoreComp;
+    $('#compScore').html(scoreComp);
 }
 function myWin() {
-    scoreMe = ++scoreMe;
+    ++scoreMe;
+    $('#myScore').html(scoreMe);
 }
 
 //Function calls compPick() to decide winner, alerts results and runs compWin() or myWin() to update score.
@@ -81,3 +82,9 @@ function myPick(user) {
         };
     };
 };
+
+//RESET BUTTON
+$("#clearOut").click( function() {
+    $("#myScore").html(0);
+    $("#compScore").html(0);
+});

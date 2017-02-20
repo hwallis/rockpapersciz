@@ -7,7 +7,9 @@
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
-    <h1 id="h11">Pick Rock, Paper, or Scissors!</h1>
+  <div class="teal lighten-2">
+    <h1 class="white-text" id="h11">Pick Rock, Paper, or Scissors!</h1>
+  </div>
       <div class="container">
         <div class="row">
             <!--CHOICES-->
@@ -18,11 +20,14 @@
       </div>
     <div class="container">
             <!--SCORES............-->
-        <h3 class="blue-text text-darken-2" class="col s4">My Score</h3>
-        <div class="myScore"></div>
+        <h3 class="teal-text text-lighten-2" class="col s4">My Score</h3>
+        <div id="myScore">0</div>
         <hr width=100% height=10px color="blue">
-        <h3 class="blue-text" class="col s4">Computer's Score</h3>
-        <div class="compScore"></div>
+        <h3 class="teal-text text-lighten-2" class="col s4">Computer's Score</h3>
+        <div id="compScore">0</div>
+    </div>
+    <div class="container">
+        <button class="btn waves-effect waves-light" id="clearOut">RESET</button>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="index.js"></script>
